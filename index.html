@@ -1,0 +1,1692 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>نادر - مهندس برمجيات وتكنولوجيا المعلومات</title>
+    <script src="./assets/js/tailwind.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/remixicon.css" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1E3A8A",
+              secondary: "#3B82F6",
+            },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      :where([class^="ri-"])::before {
+        content: "\f3c2";
+      }
+      body {
+        font-family: "Tajawal", sans-serif;
+      }
+      .gradient-bg {
+        background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+      }
+      .skill-bar {
+        height: 8px;
+        border-radius: 4px;
+        background-color: #e5e7eb;
+        overflow: hidden;
+      }
+      .skill-progress {
+        height: 100%;
+        border-radius: 4px;
+      }
+      .portfolio-item:hover .portfolio-overlay {
+        opacity: 1;
+      }
+      .portfolio-item:hover img {
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between h-16">
+          <div class="flex items-center">
+            <div class="font-['Pacifico'] text-primary text-2xl">
+              نادر | Nader
+            </div>
+          </div>
+          <div class="hidden md:flex items-center space-x-4 space-x-reverse">
+            <a
+              href="#home"
+              class="px-3 py-2 text-primary hover:text-secondary transition-colors"
+              >الرئيسية</a
+            >
+            <a
+              href="#about"
+              class="px-3 py-2 text-gray-700 hover:text-primary transition-colors"
+              >نبذة عني</a
+            >
+            <a
+              href="#expertise"
+              class="px-3 py-2 text-gray-700 hover:text-primary transition-colors"
+              >مجالات الخبرة</a
+            >
+            <a
+              href="#portfolio"
+              class="px-3 py-2 text-gray-700 hover:text-primary transition-colors"
+              >أعمالي</a
+            >
+            <a
+              href="#certifications"
+              class="px-3 py-2 text-gray-700 hover:text-primary transition-colors"
+              >الشهادات</a
+            >
+            <a
+              href="#testimonials"
+              class="px-3 py-2 text-gray-700 hover:text-primary transition-colors"
+              >آراء العملاء</a
+            >
+            <a
+              href="#contact"
+              class="px-4 py-2 bg-primary text-white !rounded-button hover:bg-secondary transition-colors cursor-pointer"
+              >تواصل معي</a
+            >
+          </div>
+          <div class="md:hidden flex items-center">
+            <button
+              id="mobile-menu-button"
+              class="w-10 h-10 flex items-center justify-center text-gray-700"
+            >
+              <i class="ri-menu-line ri-lg"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white shadow-lg absolute w-full"
+      >
+        <div class="px-2 pt-2 pb-3 space-y-1">
+          <a href="#home" class="block px-3 py-2 text-primary font-medium"
+            >الرئيسية</a
+          >
+          <a
+            href="#about"
+            class="block px-3 py-2 text-gray-700 hover:text-primary transition-colors"
+            >نبذة عني</a
+          >
+          <a
+            href="#expertise"
+            class="block px-3 py-2 text-gray-700 hover:text-primary transition-colors"
+            >مجالات الخبرة</a
+          >
+          <a
+            href="#portfolio"
+            class="block px-3 py-2 text-gray-700 hover:text-primary transition-colors"
+            >أعمالي</a
+          >
+          <a
+            href="#certifications"
+            class="block px-3 py-2 text-gray-700 hover:text-primary transition-colors"
+            >الشهادات</a
+          >
+          <a
+            href="#testimonials"
+            class="block px-3 py-2 text-gray-700 hover:text-primary transition-colors"
+            >آراء العملاء</a
+          >
+          <a
+            href="#contact"
+            class="block px-3 py-2 text-gray-700 hover:text-primary transition-colors"
+            >تواصل معي</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="pt-24 pb-16 md:pt-32 md:pb-24 gradient-bg text-white"
+    >
+      <div class="max-w-7xl mx-auto px-4 flex flex-col items-center">
+        <div
+          class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-white shadow-lg mb-6"
+        >
+          <img
+            src="./assets/imges/MyImge-RTL.png"
+            alt="نادر"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold mb-2 text-center">
+          نادر القياضي
+        </h1>
+        <h2 class="text-xl md:text-2xl mb-6 text-center">
+          مهندس برمجيات وتكنولوجيا المعلومات
+        </h2>
+        <p class="text-center max-w-2xl mb-8 text-gray-100">
+          أكثر من 3 عاماً من الخبرة في مجالات متنوعة من تطوير البرمجيات
+          وتكنولوجيا المعلومات، متخصص في حلول الويب والتطبيقات والأمن السيبراني
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a
+            href="#contact"
+            class="px-6 py-3 bg-white text-primary !rounded-button hover:bg-gray-100 transition-colors font-medium cursor-pointer"
+            >تواصل معي</a
+          >
+          <a
+            href="#"
+            class="px-6 py-3 border-2 border-white text-white !rounded-button hover:bg-white hover:text-primary transition-colors font-medium cursor-pointer"
+            >تحميل السيرة الذاتية</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-12 bg-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div class="p-4">
+            <div class="text-3xl md:text-4xl font-bold text-primary mb-2">
+              +4
+            </div>
+            <div class="text-gray-600">سنوات من الخبرة</div>
+          </div>
+          <div class="p-4">
+            <div class="text-3xl md:text-4xl font-bold text-primary mb-2">
+              +150
+            </div>
+            <div class="text-gray-600">مشروع منجز</div>
+          </div>
+          <div class="p-4">
+            <div class="text-3xl md:text-4xl font-bold text-primary mb-2">
+              +45
+            </div>
+            <div class="text-gray-600">عميل راضٍ</div>
+          </div>
+          <div class="p-4">
+            <div class="text-3xl md:text-4xl font-bold text-primary mb-2">
+              +15
+            </div>
+            <div class="text-gray-600">شهادة احترافية</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">نبذة عني</h2>
+          <div class="w-20 h-1 bg-primary mx-auto"></div>
+        </div>
+        <div class="flex flex-col md:flex-row gap-8 items-center">
+          <div class="md:w-1/3">
+            <img
+              src="./assets/imges/myPhoto.jpg"
+              alt="نادر يعمل"
+              class="rounded-lg shadow-lg w-full"
+            />
+          </div>
+          <div class="md:w-2/3">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">
+              مهندس برمجيات متعدد المهارات
+            </h3>
+            <p class="text-gray-600 mb-6">
+              أنا نادر، مهندس برمجيات وتكنولوجيا معلومات مع أكثر من 3 عاماً من
+              الخبرة في مجالات متنوعة. بدأت مسيرتي المهنية في تطوير تطبيقات
+              الويب، ثم توسعت لأشمل تطوير تطبيقات الموبايل، الشبكات، الأمن
+              السيبراني، والذكاء الاصطناعي.
+            </p>
+            <p class="text-gray-600 mb-6">
+              أعمل على تقديم حلول تقنية متكاملة للشركات والمؤسسات، مع التركيز
+              على الجودة والأمان وتجربة المستخدم. أؤمن بأن التكنولوجيا يجب أن
+              تكون أداة لتسهيل الحياة وتحسين الأعمال، وليست غاية بحد ذاتها.
+            </p>
+
+            <div class="space-y-4 mb-6">
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-gray-700 font-medium">تطوير الويب</span>
+                  <span class="text-gray-600">95%</span>
+                </div>
+                <div class="skill-bar">
+                  <div
+                    class="skill-progress bg-primary"
+                    style="width: 95%"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-gray-700 font-medium"
+                    >تطوير تطبيقات الموبايل</span
+                  >
+                  <span class="text-gray-600">90%</span>
+                </div>
+                <div class="skill-bar">
+                  <div
+                    class="skill-progress bg-primary"
+                    style="width: 90%"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-gray-700 font-medium"
+                    >الشبكات والأمن السيبراني</span
+                  >
+                  <span class="text-gray-600">85%</span>
+                </div>
+                <div class="skill-bar">
+                  <div
+                    class="skill-progress bg-primary"
+                    style="width: 85%"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-gray-700 font-medium"
+                    >الذكاء الاصطناعي</span
+                  >
+                  <span class="text-gray-600">80%</span>
+                </div>
+                <div class="skill-bar">
+                  <div
+                    class="skill-progress bg-primary"
+                    style="width: 80%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-3">
+              <span
+                class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm"
+                >JavaScript</span
+              >
+              <span
+                class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm"
+                >Python</span
+              >
+              <span
+                class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm"
+                >React</span
+              >
+              <span
+                class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm"
+                >Node.js</span
+              >
+              <span
+                class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm"
+                >Flutter</span
+              >
+              <span
+                class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm"
+                >AWS</span
+              >
+              <span
+                class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm"
+                >Docker</span
+              >
+              <span
+                class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm"
+                >Kubernetes</span
+              >
+              <span
+                class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm"
+                >Cisco</span
+              >
+              <span
+                class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm"
+                >TensorFlow</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section id="expertise" class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">مجالات الخبرة</h2>
+          <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+          <p class="text-gray-600 max-w-3xl mx-auto">
+            أقدم خدمات متكاملة في مجالات متعددة من تكنولوجيا المعلومات، مع
+            التركيز على تقديم حلول عالية الجودة تلبي احتياجات العملاء
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="bg-gray-50 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow"
+          >
+            <div
+              class="w-16 h-16 flex items-center justify-center bg-primary/10 text-primary rounded-lg mb-4"
+            >
+              <i class="ri-code-s-slash-line ri-2x"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3">
+              تطوير تطبيقات الويب
+            </h3>
+            <p class="text-gray-600 mb-4">
+              تصميم وتطوير تطبيقات ويب متكاملة باستخدام أحدث التقنيات والإطارات،
+              مع التركيز على الأداء وتجربة المستخدم والتوافق مع مختلف المتصفحات.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2 py-1 bg-primary/10 text-primary rounded text-xs"
+                >React</span
+              >
+              <span class="px-2 py-1 bg-primary/10 text-primary rounded text-xs"
+                >Angular</span
+              >
+              <span class="px-2 py-1 bg-primary/10 text-primary rounded text-xs"
+                >Vue.js</span
+              >
+              <span class="px-2 py-1 bg-primary/10 text-primary rounded text-xs"
+                >Node.js</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="bg-gray-50 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow"
+          >
+            <div
+              class="w-16 h-16 flex items-center justify-center bg-primary/10 text-primary rounded-lg mb-4"
+            >
+              <i class="ri-smartphone-line ri-2x"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3">
+              تطوير تطبيقات الموبايل
+            </h3>
+            <p class="text-gray-600 mb-4">
+              بناء تطبيقات موبايل عالية الأداء لنظامي Android و iOS، مع التركيز
+              على تجربة مستخدم سلسة وتصميم جذاب وأداء متميز.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2 py-1 bg-primary/10 text-primary rounded text-xs"
+                >Flutter</span
+              >
+              <span class="px-2 py-1 bg-primary/10 text-primary rounded text-xs"
+                >React Native</span
+              >
+              <span class="px-2 py-1 bg-primary/10 text-primary rounded text-xs"
+                >Swift</span
+              >
+              <span class="px-2 py-1 bg-primary/10 text-primary rounded text-xs"
+                >Kotlin</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="bg-gray-50 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow"
+          >
+            <div
+              class="w-16 h-16 flex items-center justify-center bg-primary/10 text-primary rounded-lg mb-4"
+            >
+              <i class="ri-global-line ri-2x"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3">الشبكات</h3>
+            <p class="text-gray-600 mb-4">
+              تصميم وإدارة شبكات الحاسوب للشركات والمؤسسات، مع ضمان الاتصال
+              الموثوق والأداء العالي وسهولة الإدارة والصيانة.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2 py-1 bg-primary/10 text-primary rounded text-xs"
+                >Cisco</span
+              >
+              <span class="px-2 py-1 bg-primary/10 text-primary rounded text-xs"
+                >Juniper</span
+              >
+              <span class="px-2 py-1 bg-primary/10 text-primary rounded text-xs"
+                >VPN</span
+              >
+              <span class="px-2 py-1 bg-primary/10 text-primary rounded text-xs"
+                >SD-WAN</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="bg-gray-50 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow"
+          >
+            <div
+              class="w-16 h-16 flex items-center justify-center bg-primary/10 text-primary rounded-lg mb-4"
+            >
+              <i class="ri-shield-keyhole-line ri-2x"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3">
+              الأمن السيبراني
+            </h3>
+            <p class="text-gray-600 mb-4">
+              حماية البنية التحتية والبيانات من التهديدات الإلكترونية، مع تقديم
+              حلول شاملة للأمن السيبراني تشمل التقييم والحماية والاستجابة
+              للحوادث.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2 py-1 bg-primary/10 text-primary rounded text-xs"
+                >Penetration Testing</span
+              >
+              <span class="px-2 py-1 bg-primary/10 text-primary rounded text-xs"
+                >SIEM</span
+              >
+              <span class="px-2 py-1 bg-primary/10 text-primary rounded text-xs"
+                >Firewall</span
+              >
+              <span class="px-2 py-1 bg-primary/10 text-primary rounded text-xs"
+                >ISO 27001</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="bg-gray-50 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow"
+          >
+            <div
+              class="w-16 h-16 flex items-center justify-center bg-primary/10 text-primary rounded-lg mb-4"
+            >
+              <i class="ri-brain-line ri-2x"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3">
+              الذكاء الاصطناعي
+            </h3>
+            <p class="text-gray-600 mb-4">
+              تطوير حلول ذكاء اصطناعي وتعلم آلي لتحسين العمليات التجارية واتخاذ
+              القرارات، مع التركيز على الدقة والكفاءة وقابلية التطوير.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2 py-1 bg-primary/10 text-primary rounded text-xs"
+                >Machine Learning</span
+              >
+              <span class="px-2 py-1 bg-primary/10 text-primary rounded text-xs"
+                >TensorFlow</span
+              >
+              <span class="px-2 py-1 bg-primary/10 text-primary rounded text-xs"
+                >PyTorch</span
+              >
+              <span class="px-2 py-1 bg-primary/10 text-primary rounded text-xs"
+                >NLP</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="bg-gray-50 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow"
+          >
+            <div
+              class="w-16 h-16 flex items-center justify-center bg-primary/10 text-primary rounded-lg mb-4"
+            >
+              <i class="ri-cloud-line ri-2x"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3">
+              الحوسبة السحابية
+            </h3>
+            <p class="text-gray-600 mb-4">
+              تصميم وتنفيذ حلول سحابية مرنة وقابلة للتطوير، مع التركيز على
+              الأداء والتكلفة والأمان والتوافر العالي للخدمات.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2 py-1 bg-primary/10 text-primary rounded text-xs"
+                >AWS</span
+              >
+              <span class="px-2 py-1 bg-primary/10 text-primary rounded text-xs"
+                >Azure</span
+              >
+              <span class="px-2 py-1 bg-primary/10 text-primary rounded text-xs"
+                >Google Cloud</span
+              >
+              <span class="px-2 py-1 bg-primary/10 text-primary rounded text-xs"
+                >DevOps</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">أعمالي</h2>
+          <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+          <p class="text-gray-600 max-w-3xl mx-auto">
+            مجموعة مختارة من المشاريع التي قمت بتطويرها وتنفيذها لعملاء متنوعين
+            في مختلف المجالات
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div
+            class="portfolio-item bg-white rounded-lg overflow-hidden shadow-md group"
+          >
+            <div class="relative overflow-hidden h-48">
+              <img
+                src="https://readdy.ai/api/search-image?query=professional%20banking%20app%20interface%2C%20Arabic%20UI%2C%20mobile%20application%20design%2C%20financial%20dashboard%2C%20clean%20modern%20design%2C%20high%20quality&width=600&height=400&seq=3&orientation=landscape"
+                alt="تطبيق مصرفي"
+                class="w-full h-full object-cover transition-transform duration-300"
+              />
+              <div
+                class="portfolio-overlay absolute inset-0 bg-primary/80 flex items-center justify-center opacity-0 transition-opacity duration-300"
+              >
+                <a
+                  href="#"
+                  class="text-white border border-white rounded-full w-10 h-10 flex items-center justify-center mx-2 hover:bg-white hover:text-primary transition-colors cursor-pointer"
+                >
+                  <i class="ri-eye-line"></i>
+                </a>
+                <a
+                  href="#"
+                  class="text-white border border-white rounded-full w-10 h-10 flex items-center justify-center mx-2 hover:bg-white hover:text-primary transition-colors cursor-pointer"
+                >
+                  <i class="ri-link"></i>
+                </a>
+              </div>
+            </div>
+            <div class="p-4">
+              <h3 class="text-lg font-bold text-gray-800 mb-2">
+                تطبيق الخدمات المصرفية
+              </h3>
+              <p class="text-gray-600 text-sm mb-3">
+                تطبيق موبايل متكامل للخدمات المصرفية لأحد البنوك الرائدة، يتيح
+                للعملاء إدارة حساباتهم وإجراء المعاملات بسهولة وأمان.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-2 py-1 bg-gray-100 text-gray-600 rounded text-xs"
+                  >React Native</span
+                >
+                <span
+                  class="px-2 py-1 bg-gray-100 text-gray-600 rounded text-xs"
+                  >Node.js</span
+                >
+                <span
+                  class="px-2 py-1 bg-gray-100 text-gray-600 rounded text-xs"
+                  >MongoDB</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="portfolio-item bg-white rounded-lg overflow-hidden shadow-md group"
+          >
+            <div class="relative overflow-hidden h-48">
+              <img
+                src="https://readdy.ai/api/search-image?query=e-commerce%20website%20interface%20in%20Arabic%2C%20product%20listing%2C%20shopping%20cart%2C%20modern%20clean%20design%2C%20high%20quality&width=600&height=400&seq=4&orientation=landscape"
+                alt="منصة تجارة إلكترونية"
+                class="w-full h-full object-cover transition-transform duration-300"
+              />
+              <div
+                class="portfolio-overlay absolute inset-0 bg-primary/80 flex items-center justify-center opacity-0 transition-opacity duration-300"
+              >
+                <a
+                  href="#"
+                  class="text-white border border-white rounded-full w-10 h-10 flex items-center justify-center mx-2 hover:bg-white hover:text-primary transition-colors cursor-pointer"
+                >
+                  <i class="ri-eye-line"></i>
+                </a>
+                <a
+                  href="#"
+                  class="text-white border border-white rounded-full w-10 h-10 flex items-center justify-center mx-2 hover:bg-white hover:text-primary transition-colors cursor-pointer"
+                >
+                  <i class="ri-link"></i>
+                </a>
+              </div>
+            </div>
+            <div class="p-4">
+              <h3 class="text-lg font-bold text-gray-800 mb-2">
+                منصة تجارة إلكترونية
+              </h3>
+              <p class="text-gray-600 text-sm mb-3">
+                منصة تجارة إلكترونية متكاملة لشركة تجزئة كبرى، تتضمن واجهة
+                مستخدم سلسة ونظام إدارة مخزون متقدم ودمج مع بوابات الدفع.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-2 py-1 bg-gray-100 text-gray-600 rounded text-xs"
+                  >React</span
+                >
+                <span
+                  class="px-2 py-1 bg-gray-100 text-gray-600 rounded text-xs"
+                  >Laravel</span
+                >
+                <span
+                  class="px-2 py-1 bg-gray-100 text-gray-600 rounded text-xs"
+                  >MySQL</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="portfolio-item bg-white rounded-lg overflow-hidden shadow-md group"
+          >
+            <div class="relative overflow-hidden h-48">
+              <img
+                src="https://readdy.ai/api/search-image?query=network%20security%20dashboard%20interface%2C%20cybersecurity%20monitoring%2C%20Arabic%20UI%2C%20data%20visualization%2C%20modern%20design%2C%20high%20quality&width=600&height=400&seq=5&orientation=landscape"
+                alt="نظام أمن سيبراني"
+                class="w-full h-full object-cover transition-transform duration-300"
+              />
+              <div
+                class="portfolio-overlay absolute inset-0 bg-primary/80 flex items-center justify-center opacity-0 transition-opacity duration-300"
+              >
+                <a
+                  href="#"
+                  class="text-white border border-white rounded-full w-10 h-10 flex items-center justify-center mx-2 hover:bg-white hover:text-primary transition-colors cursor-pointer"
+                >
+                  <i class="ri-eye-line"></i>
+                </a>
+                <a
+                  href="#"
+                  class="text-white border border-white rounded-full w-10 h-10 flex items-center justify-center mx-2 hover:bg-white hover:text-primary transition-colors cursor-pointer"
+                >
+                  <i class="ri-link"></i>
+                </a>
+              </div>
+            </div>
+            <div class="p-4">
+              <h3 class="text-lg font-bold text-gray-800 mb-2">
+                نظام مراقبة أمن سيبراني
+              </h3>
+              <p class="text-gray-600 text-sm mb-3">
+                نظام متكامل لمراقبة وإدارة الأمن السيبراني لشركة اتصالات، يتيح
+                مراقبة التهديدات في الوقت الفعلي والاستجابة السريعة للحوادث.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-2 py-1 bg-gray-100 text-gray-600 rounded text-xs"
+                  >Python</span
+                >
+                <span
+                  class="px-2 py-1 bg-gray-100 text-gray-600 rounded text-xs"
+                  >Django</span
+                >
+                <span
+                  class="px-2 py-1 bg-gray-100 text-gray-600 rounded text-xs"
+                  >Elasticsearch</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="portfolio-item bg-white rounded-lg overflow-hidden shadow-md group"
+          >
+            <div class="relative overflow-hidden h-48">
+              <img
+                src="https://readdy.ai/api/search-image?query=AI%20chatbot%20interface%20in%20Arabic%2C%20conversational%20UI%2C%20virtual%20assistant%2C%20modern%20clean%20design%2C%20high%20quality&width=600&height=400&seq=6&orientation=landscape"
+                alt="روبوت محادثة ذكي"
+                class="w-full h-full object-cover transition-transform duration-300"
+              />
+              <div
+                class="portfolio-overlay absolute inset-0 bg-primary/80 flex items-center justify-center opacity-0 transition-opacity duration-300"
+              >
+                <a
+                  href="#"
+                  class="text-white border border-white rounded-full w-10 h-10 flex items-center justify-center mx-2 hover:bg-white hover:text-primary transition-colors cursor-pointer"
+                >
+                  <i class="ri-eye-line"></i>
+                </a>
+                <a
+                  href="#"
+                  class="text-white border border-white rounded-full w-10 h-10 flex items-center justify-center mx-2 hover:bg-white hover:text-primary transition-colors cursor-pointer"
+                >
+                  <i class="ri-link"></i>
+                </a>
+              </div>
+            </div>
+            <div class="p-4">
+              <h3 class="text-lg font-bold text-gray-800 mb-2">
+                روبوت محادثة ذكي
+              </h3>
+              <p class="text-gray-600 text-sm mb-3">
+                روبوت محادثة ذكي لشركة خدمات، يستخدم تقنيات الذكاء الاصطناعي
+                ومعالجة اللغة الطبيعية للرد على استفسارات العملاء وتقديم
+                المساعدة.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-2 py-1 bg-gray-100 text-gray-600 rounded text-xs"
+                  >TensorFlow</span
+                >
+                <span
+                  class="px-2 py-1 bg-gray-100 text-gray-600 rounded text-xs"
+                  >Flask</span
+                >
+                <span
+                  class="px-2 py-1 bg-gray-100 text-gray-600 rounded text-xs"
+                  >NLP</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="portfolio-item bg-white rounded-lg overflow-hidden shadow-md group"
+          >
+            <div class="relative overflow-hidden h-48">
+              <img
+                src="https://readdy.ai/api/search-image?query=real%20estate%20mobile%20app%20interface%20in%20Arabic%2C%20property%20listings%2C%20map%20view%2C%20modern%20clean%20design%2C%20high%20quality&width=600&height=400&seq=7&orientation=landscape"
+                alt="تطبيق عقارات"
+                class="w-full h-full object-cover transition-transform duration-300"
+              />
+              <div
+                class="portfolio-overlay absolute inset-0 bg-primary/80 flex items-center justify-center opacity-0 transition-opacity duration-300"
+              >
+                <a
+                  href="#"
+                  class="text-white border border-white rounded-full w-10 h-10 flex items-center justify-center mx-2 hover:bg-white hover:text-primary transition-colors cursor-pointer"
+                >
+                  <i class="ri-eye-line"></i>
+                </a>
+                <a
+                  href="#"
+                  class="text-white border border-white rounded-full w-10 h-10 flex items-center justify-center mx-2 hover:bg-white hover:text-primary transition-colors cursor-pointer"
+                >
+                  <i class="ri-link"></i>
+                </a>
+              </div>
+            </div>
+            <div class="p-4">
+              <h3 class="text-lg font-bold text-gray-800 mb-2">تطبيق عقارات</h3>
+              <p class="text-gray-600 text-sm mb-3">
+                تطبيق موبايل لشركة عقارات، يتيح للمستخدمين البحث عن العقارات
+                وتصفحها وحجز المعاينات، مع ميزات متقدمة مثل الواقع المعزز.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-2 py-1 bg-gray-100 text-gray-600 rounded text-xs"
+                  >Flutter</span
+                >
+                <span
+                  class="px-2 py-1 bg-gray-100 text-gray-600 rounded text-xs"
+                  >Firebase</span
+                >
+                <span
+                  class="px-2 py-1 bg-gray-100 text-gray-600 rounded text-xs"
+                  >AR Kit</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="portfolio-item bg-white rounded-lg overflow-hidden shadow-md group"
+          >
+            <div class="relative overflow-hidden h-48">
+              <img
+                src="https://readdy.ai/api/search-image?query=healthcare%20platform%20interface%20in%20Arabic%2C%20patient%20records%2C%20medical%20dashboard%2C%20modern%20clean%20design%2C%20high%20quality&width=600&height=400&seq=8&orientation=landscape"
+                alt="منصة رعاية صحية"
+                class="w-full h-full object-cover transition-transform duration-300"
+              />
+              <div
+                class="portfolio-overlay absolute inset-0 bg-primary/80 flex items-center justify-center opacity-0 transition-opacity duration-300"
+              >
+                <a
+                  href="#"
+                  class="text-white border border-white rounded-full w-10 h-10 flex items-center justify-center mx-2 hover:bg-white hover:text-primary transition-colors cursor-pointer"
+                >
+                  <i class="ri-eye-line"></i>
+                </a>
+                <a
+                  href="#"
+                  class="text-white border border-white rounded-full w-10 h-10 flex items-center justify-center mx-2 hover:bg-white hover:text-primary transition-colors cursor-pointer"
+                >
+                  <i class="ri-link"></i>
+                </a>
+              </div>
+            </div>
+            <div class="p-4">
+              <h3 class="text-lg font-bold text-gray-800 mb-2">
+                منصة رعاية صحية
+              </h3>
+              <p class="text-gray-600 text-sm mb-3">
+                منصة متكاملة لإدارة المستشفيات والعيادات، تشمل إدارة المرضى
+                والمواعيد والسجلات الطبية والفواتير، مع مراعاة معايير الخصوصية
+                والأمان.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-2 py-1 bg-gray-100 text-gray-600 rounded text-xs"
+                  >Angular</span
+                >
+                <span
+                  class="px-2 py-1 bg-gray-100 text-gray-600 rounded text-xs"
+                  >.NET Core</span
+                >
+                <span
+                  class="px-2 py-1 bg-gray-100 text-gray-600 rounded text-xs"
+                  >SQL Server</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-10">
+          <a
+            href="#"
+            class="px-6 py-3 bg-primary text-white !rounded-button hover:bg-secondary transition-colors font-medium inline-block cursor-pointer"
+            >عرض المزيد من الأعمال</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">
+            الشهادات والمؤهلات
+          </h2>
+          <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+          <p class="text-gray-600 max-w-3xl mx-auto">
+            حاصل على العديد من الشهادات المعتمدة من كبرى المؤسسات التقنية
+            العالمية
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div
+            class="bg-gray-50 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow"
+          >
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary rounded-lg mr-4"
+              >
+                <i class="ri-award-line ri-lg"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-gray-800">
+                  AWS Certified Solutions Architect
+                </h3>
+                <p class="text-gray-600 text-sm">Amazon Web Services</p>
+              </div>
+            </div>
+            <p class="text-gray-600 text-sm mb-3">
+              شهادة معتمدة في تصميم وتنفيذ الحلول السحابية على منصة AWS، تثبت
+              القدرة على تصميم وتنفيذ أنظمة موزعة مرنة وعالية التوافر.
+            </p>
+            <div class="flex justify-between items-center">
+              <span class="text-gray-500 text-xs"
+                >تاريخ الإصدار: يناير 2023</span
+              >
+              <span class="text-gray-500 text-xs">صالحة حتى: يناير 2026</span>
+            </div>
+          </div>
+
+          <div
+            class="bg-gray-50 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow"
+          >
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary rounded-lg mr-4"
+              >
+                <i class="ri-award-line ri-lg"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-gray-800">
+                  Certified Information Security Manager
+                </h3>
+                <p class="text-gray-600 text-sm">ISACA</p>
+              </div>
+            </div>
+            <p class="text-gray-600 text-sm mb-3">
+              شهادة معتمدة في إدارة أمن المعلومات، تثبت القدرة على إدارة وتصميم
+              وتقييم برنامج أمن المعلومات للمؤسسة.
+            </p>
+            <div class="flex justify-between items-center">
+              <span class="text-gray-500 text-xs"
+                >تاريخ الإصدار: مارس 2022</span
+              >
+              <span class="text-gray-500 text-xs">صالحة حتى: مارس 2025</span>
+            </div>
+          </div>
+
+          <div
+            class="bg-gray-50 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow"
+          >
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary rounded-lg mr-4"
+              >
+                <i class="ri-award-line ri-lg"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-gray-800">
+                  Certified Kubernetes Administrator
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  Cloud Native Computing Foundation
+                </p>
+              </div>
+            </div>
+            <p class="text-gray-600 text-sm mb-3">
+              شهادة معتمدة في إدارة منصات Kubernetes، تثبت القدرة على تثبيت
+              وتكوين وإدارة تطبيقات Kubernetes للإنتاج.
+            </p>
+            <div class="flex justify-between items-center">
+              <span class="text-gray-500 text-xs"
+                >تاريخ الإصدار: يوليو 2022</span
+              >
+              <span class="text-gray-500 text-xs">صالحة حتى: يوليو 2025</span>
+            </div>
+          </div>
+
+          <div
+            class="bg-gray-50 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow"
+          >
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary rounded-lg mr-4"
+              >
+                <i class="ri-award-line ri-lg"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-gray-800">
+                  TensorFlow Developer Certificate
+                </h3>
+                <p class="text-gray-600 text-sm">Google</p>
+              </div>
+            </div>
+            <p class="text-gray-600 text-sm mb-3">
+              شهادة معتمدة في تطوير تطبيقات الذكاء الاصطناعي باستخدام
+              TensorFlow، تثبت القدرة على بناء وتدريب نماذج التعلم الآلي.
+            </p>
+            <div class="flex justify-between items-center">
+              <span class="text-gray-500 text-xs"
+                >تاريخ الإصدار: أكتوبر 2023</span
+              >
+              <span class="text-gray-500 text-xs">صالحة حتى: أكتوبر 2026</span>
+            </div>
+          </div>
+
+          <div
+            class="bg-gray-50 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow"
+          >
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary rounded-lg mr-4"
+              >
+                <i class="ri-award-line ri-lg"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-gray-800">
+                  Cisco Certified Network Professional
+                </h3>
+                <p class="text-gray-600 text-sm">Cisco</p>
+              </div>
+            </div>
+            <p class="text-gray-600 text-sm mb-3">
+              شهادة معتمدة في تصميم وتنفيذ وتشغيل شبكات المؤسسات المعقدة، تثبت
+              القدرة على العمل مع الشبكات المتقدمة والأمان.
+            </p>
+            <div class="flex justify-between items-center">
+              <span class="text-gray-500 text-xs"
+                >تاريخ الإصدار: مايو 2021</span
+              >
+              <span class="text-gray-500 text-xs">صالحة حتى: مايو 2024</span>
+            </div>
+          </div>
+
+          <div
+            class="bg-gray-50 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow"
+          >
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary rounded-lg mr-4"
+              >
+                <i class="ri-award-line ri-lg"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-gray-800">
+                  Microsoft Certified: Azure Solutions Architect
+                </h3>
+                <p class="text-gray-600 text-sm">Microsoft</p>
+              </div>
+            </div>
+            <p class="text-gray-600 text-sm mb-3">
+              شهادة معتمدة في تصميم الحلول على منصة Microsoft Azure، تثبت القدرة
+              على تصميم وتنفيذ حلول سحابية آمنة وقابلة للتطوير.
+            </p>
+            <div class="flex justify-between items-center">
+              <span class="text-gray-500 text-xs"
+                >تاريخ الإصدار: فبراير 2023</span
+              >
+              <span class="text-gray-500 text-xs">صالحة حتى: فبراير 2026</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">آراء العملاء</h2>
+          <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+          <p class="text-gray-600 max-w-3xl mx-auto">
+            ما يقوله عملائي عن تجربتهم في العمل معي
+          </p>
+        </div>
+
+        <div class="testimonial-slider relative">
+          <div
+            id="testimonials-container"
+            class="flex overflow-x-auto pb-8 snap-x snap-mandatory hide-scrollbar"
+          >
+            <div
+              class="min-w-full md:min-w-[50%] lg:min-w-[33.333%] px-4 snap-center"
+            >
+              <div class="bg-white rounded-lg p-6 shadow-md h-full">
+                <div class="flex items-center mb-4">
+                  <div class="text-yellow-400 flex">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                  </div>
+                </div>
+                <p class="text-gray-600 mb-6">
+                  "تعاملت مع المهندس نادر في مشروع تطوير تطبيق موبايل لشركتنا،
+                  وكانت التجربة ممتازة من جميع النواحي. التزم بالمواعيد المحددة
+                  وقدم عملاً عالي الجودة يفوق توقعاتنا. أنصح بشدة بالتعامل معه."
+                </p>
+                <div class="flex items-center">
+                  <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                    <img
+                      src="https://readdy.ai/api/search-image?query=professional%20Arabic%20businessman%2C%20portrait%2C%20formal%20attire%2C%20high%20quality%2C%20realistic&width=100&height=100&seq=9&orientation=squarish"
+                      alt="محمد العتيبي"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-gray-800">محمد العتيبي</h4>
+                    <p class="text-gray-600 text-sm">
+                      المدير التنفيذي، شركة تقنية المستقبل
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="min-w-full md:min-w-[50%] lg:min-w-[33.333%] px-4 snap-center"
+            >
+              <div class="bg-white rounded-lg p-6 shadow-md h-full">
+                <div class="flex items-center mb-4">
+                  <div class="text-yellow-400 flex">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                  </div>
+                </div>
+                <p class="text-gray-600 mb-6">
+                  "قام المهندس نادر بتطوير نظام أمن سيبراني متكامل لمؤسستنا،
+                  وكان العمل احترافياً بكل المقاييس. يتميز بالفهم العميق
+                  للمتطلبات وتقديم حلول مبتكرة للمشكلات المعقدة. سنستمر بالتعاون
+                  معه في المشاريع المستقبلية."
+                </p>
+                <div class="flex items-center">
+                  <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                    <img
+                      src="https://readdy.ai/api/search-image?query=professional%20Arabic%20businesswoman%2C%20portrait%2C%20formal%20attire%2C%20high%20quality%2C%20realistic&width=100&height=100&seq=10&orientation=squarish"
+                      alt="سارة الخالدي"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-gray-800">سارة الخالدي</h4>
+                    <p class="text-gray-600 text-sm">
+                      مديرة تكنولوجيا المعلومات، بنك الاستثمار
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="min-w-full md:min-w-[50%] lg:min-w-[33.333%] px-4 snap-center"
+            >
+              <div class="bg-white rounded-lg p-6 shadow-md h-full">
+                <div class="flex items-center mb-4">
+                  <div class="text-yellow-400 flex">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                  </div>
+                </div>
+                <p class="text-gray-600 mb-6">
+                  "تعاونا مع المهندس نادر في تطوير منصة تعليمية تعتمد على الذكاء
+                  الاصطناعي، وكانت النتائج مبهرة. يمتلك معرفة واسعة في مجال
+                  الذكاء الاصطناعي وتطبيقاته، ويقدم حلولاً مبتكرة وعملية. أنصح
+                  بشدة بالتعامل معه."
+                </p>
+                <div class="flex items-center">
+                  <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                    <img
+                      src="https://readdy.ai/api/search-image?query=professional%20Arabic%20man%2C%20portrait%2C%20casual%20business%20attire%2C%20high%20quality%2C%20realistic&width=100&height=100&seq=11&orientation=squarish"
+                      alt="أحمد القحطاني"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-gray-800">أحمد القحطاني</h4>
+                    <p class="text-gray-600 text-sm">
+                      مؤسس، أكاديمية التعلم الذكي
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="min-w-full md:min-w-[50%] lg:min-w-[33.333%] px-4 snap-center"
+            >
+              <div class="bg-white rounded-lg p-6 shadow-md h-full">
+                <div class="flex items-center mb-4">
+                  <div class="text-yellow-400 flex">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-half-fill"></i>
+                  </div>
+                </div>
+                <p class="text-gray-600 mb-6">
+                  "قام المهندس نادر بتطوير موقع وتطبيق للتجارة الإلكترونية
+                  لشركتنا، وكان العمل ممتازاً. يتميز بالاحترافية والالتزام
+                  بالمواعيد والتواصل المستمر خلال مراحل المشروع. نخطط للاستمرار
+                  في التعاون معه لتطوير المنصة مستقبلاً."
+                </p>
+                <div class="flex items-center">
+                  <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                    <img
+                      src="https://readdy.ai/api/search-image?query=professional%20Arabic%20businesswoman%2C%20portrait%2C%20modern%20hijab%2C%20formal%20attire%2C%20high%20quality%2C%20realistic&width=100&height=100&seq=12&orientation=squarish"
+                      alt="نورة الشمري"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-gray-800">نورة الشمري</h4>
+                    <p class="text-gray-600 text-sm">
+                      مديرة التسويق، متجر الأناقة
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex justify-center mt-6">
+            <button
+              id="prev-testimonial"
+              class="w-10 h-10 flex items-center justify-center bg-white text-primary rounded-full shadow-md hover:bg-primary hover:text-white transition-colors mr-2 cursor-pointer"
+            >
+              <i class="ri-arrow-left-s-line"></i>
+            </button>
+            <button
+              id="next-testimonial"
+              class="w-10 h-10 flex items-center justify-center bg-white text-primary rounded-full shadow-md hover:bg-primary hover:text-white transition-colors cursor-pointer"
+            >
+              <i class="ri-arrow-right-s-line"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">تواصل معي</h2>
+          <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+          <p class="text-gray-600 max-w-3xl mx-auto">
+            هل لديك مشروع تقني تحتاج إلى تنفيذه؟ أو استفسار حول خدماتي؟ لا تتردد
+            في التواصل معي
+          </p>
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-8">
+          <div class="md:w-1/3 bg-gray-50 rounded-lg p-6 shadow-md">
+            <h3 class="text-xl font-bold text-gray-800 mb-6">
+              معلومات التواصل
+            </h3>
+
+            <div class="space-y-4">
+              <div class="flex items-start">
+                <div
+                  class="w-10 h-10 flex items-center justify-center bg-primary/10 text-primary rounded-lg mt-1 ml-4"
+                >
+                  <i class="ri-mail-line"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium text-gray-800 mb-1">
+                    البريد الإلكتروني
+                  </h4>
+                  <p class="text-gray-600">naderwadah71@gmail.com</p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div
+                  class="w-10 h-10 flex items-center justify-center bg-primary/10 text-primary rounded-lg mt-1 ml-4"
+                >
+                  <i class="ri-phone-line"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium text-gray-800 mb-1">الهاتف</h4>
+                  <p class="text-gray-600">737127316</p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div
+                  class="w-10 h-10 flex items-center justify-center bg-primary/10 text-primary rounded-lg mt-1 ml-4"
+                >
+                  <i class="ri-map-pin-line"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium text-gray-800 mb-1">الموقع</h4>
+                  <p class="text-gray-600">تعز , الجمهورية اليمنية</p>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="text-xl font-bold text-gray-800 mt-8 mb-4">
+              تابعني على
+            </h3>
+
+            <div class="flex space-x-4 space-x-reverse">
+              <a
+                href="https://t.me/Programming_genius_1?start=مرحبًا مهندس نادر, أرغب بالتعامل معك"
+                class="w-10 h-10 flex items-center justify-center bg-primary text-white rounded-lg hover:bg-secondary transition-colors cursor-pointer"
+              >
+                <i class="ri-teegram-fill"></i>
+              </a>
+              <a
+                href="https://github.com/naderwddah"
+                class="w-10 h-10 flex items-center justify-center bg-primary text-white rounded-lg hover:bg-secondary transition-colors cursor-pointer"
+              >
+                <i class="ri-github-fill"></i>
+              </a>
+              <a
+                href="
+https://wa.me/967737127316?text=مرحبًا%20مهندس%20نادر%2C%20أرغب%20بالتعامل%20معك"
+                class="w-10 h-10 flex items-center justify-center bg-primary text-white rounded-lg hover:bg-secondary transition-colors cursor-pointer"
+              >
+                <i class="ri-whatsapp-x-fill"></i>
+              </a>
+
+              <a
+                href="https://www.instagram.com/lonely_nader?igsh=MThodzZuaHkwa3FkbA=="
+                class="w-10 h-10 flex items-center justify-center bg-primary text-white rounded-lg hover:bg-secondary transition-colors cursor-pointer"
+              >
+                <i class="ri-instagram-fill"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="md:w-2/3">
+            <form id="contact-form" class="bg-gray-50 rounded-lg p-6 shadow-md">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label for="name" class="block text-gray-700 font-medium mb-2"
+                    >الاسم</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    required
+                  />
+                </div>
+                <div>
+                  <label
+                    for="email"
+                    class="block text-gray-700 font-medium mb-2"
+                    >البريد الإلكتروني</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="mb-6">
+                <label
+                  for="subject"
+                  class="block text-gray-700 font-medium mb-2"
+                  >الموضوع</label
+                >
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                  required
+                />
+              </div>
+
+              <div class="mb-6">
+                <label
+                  for="message"
+                  class="block text-gray-700 font-medium mb-2"
+                  >الرسالة</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                  required
+                ></textarea>
+              </div>
+
+              <div>
+                <button
+                  type="submit"
+                  class="px-6 py-3 bg-primary text-white !rounded-button hover:bg-secondary transition-colors font-medium cursor-pointer"
+                >
+                  إرسال الرسالة
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="max-w-7xl mx-auto px-4">
+        <div
+          class="flex flex-col md:flex-row justify-between items-center mb-8"
+        >
+          <div class="mb-6 md:mb-0">
+            <div class="font-['Pacifico'] text-white text-3xl mb-2">
+              نادر | Nader
+            </div>
+            <p class="text-gray-400">مهندس برمجيات وتكنولوجيا المعلومات</p>
+          </div>
+
+          <div class="flex flex-wrap justify-center gap-4">
+            <a
+              href="#home"
+              class="text-gray-400 hover:text-white transition-colors"
+              >الرئيسية</a
+            >
+            <a
+              href="#about"
+              class="text-gray-400 hover:text-white transition-colors"
+              >نبذة عني</a
+            >
+            <a
+              href="#expertise"
+              class="text-gray-400 hover:text-white transition-colors"
+              >مجالات الخبرة</a
+            >
+            <a
+              href="#portfolio"
+              class="text-gray-400 hover:text-white transition-colors"
+              >أعمالي</a
+            >
+            <a
+              href="#certifications"
+              class="text-gray-400 hover:text-white transition-colors"
+              >الشهادات</a
+            >
+            <a
+              href="#testimonials"
+              class="text-gray-400 hover:text-white transition-colors"
+              >آراء العملاء</a
+            >
+            <a
+              href="#contact"
+              class="text-gray-400 hover:text-white transition-colors"
+              >تواصل معي</a
+            >
+          </div>
+        </div>
+
+        <hr class="border-gray-800 mb-8" />
+
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <p class="text-gray-400 mb-4 md:mb-0">
+            © 2025 نادر الحسيني. جميع الحقوق محفوظة.
+          </p>
+
+          <div class="flex space-x-4 space-x-reverse">
+            <a
+              href="https://t.me/Programming_genius_1?start=مرحبًا مهندس نادر, أرغب بالتعامل معك"
+              class="text-gray-400 hover:text-white transition-colors cursor-pointer"
+            >
+              <i class="ri-telegram-fill"></i>
+            </a>
+            <a
+              href="https://github.com/naderwddah"
+              class="text-gray-400 hover:text-white transition-colors cursor-pointer"
+            >
+              <i class="ri-github-fill"></i>
+            </a>
+            <a
+              href="
+https://wa.me/967737127316?text=مرحبًا%20مهندس%20نادر%2C%20أرغب%20بالتعامل%20معك"
+              class="text-gray-400 hover:text-white transition-colors cursor-pointer"
+            >
+              <i class="ri-whatsapp-fill"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/lonely_nader?igsh=MThodzZuaHkwa3FkbA=="
+              class="text-gray-400 hover:text-white transition-colors cursor-pointer"
+            >
+              <i class="ri-instagram-fill"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button
+      id="back-to-top"
+      class="fixed bottom-6 right-6 w-12 h-12 bg-primary text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 cursor-pointer"
+    >
+      <i class="ri-arrow-up-line ri-lg"></i>
+    </button>
+
+    <!-- Mobile Menu Script -->
+    <script id="mobile-menu-script">
+      document.addEventListener("DOMContentLoaded", function () {
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        mobileMenuButton.addEventListener("click", function () {
+          mobileMenu.classList.toggle("hidden");
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+        mobileMenuLinks.forEach((link) => {
+          link.addEventListener("click", function () {
+            mobileMenu.classList.add("hidden");
+          });
+        });
+      });
+    </script>
+
+    <!-- Testimonials Slider Script -->
+    <script id="testimonials-slider-script">
+      document.addEventListener("DOMContentLoaded", function () {
+        const container = document.getElementById("testimonials-container");
+        const prevButton = document.getElementById("prev-testimonial");
+        const nextButton = document.getElementById("next-testimonial");
+
+        let scrollAmount = 0;
+        const slideWidth = container.querySelector("div").offsetWidth;
+
+        prevButton.addEventListener("click", function () {
+          scrollAmount = Math.max(scrollAmount - slideWidth, 0);
+          container.scrollTo({
+            left: scrollAmount,
+            behavior: "smooth",
+          });
+        });
+
+        nextButton.addEventListener("click", function () {
+          scrollAmount = Math.min(
+            scrollAmount + slideWidth,
+            container.scrollWidth - container.clientWidth
+          );
+          container.scrollTo({
+            left: scrollAmount,
+            behavior: "smooth",
+          });
+        });
+
+        // Add this to hide scrollbar but keep functionality
+        const style = document.createElement("style");
+        style.textContent = `
+                .hide-scrollbar::-webkit-scrollbar {
+                    display: none;
+                }
+                .hide-scrollbar {
+                    -ms-overflow-style: none;
+                    scrollbar-width: none;
+                }
+            `;
+        document.head.appendChild(style);
+      });
+    </script>
+
+    <!-- Contact Form Script -->
+    <script id="contact-form-script">
+      document.addEventListener("DOMContentLoaded", function () {
+        const contactForm = document.getElementById("contact-form");
+
+        contactForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // Get form values
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const subject = document.getElementById("subject").value;
+          const message = document.getElementById("message").value;
+
+          // Here you would typically send the form data to a server
+          // For this example, we'll just show a success message
+
+          // Create success message
+          const successMessage = document.createElement("div");
+          successMessage.className =
+            "bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mt-4";
+          successMessage.innerHTML = `
+                    <strong class="font-bold">تم الإرسال بنجاح!</strong>
+                    <span class="block sm:inline"> سيتم التواصل معك قريباً.</span>
+                `;
+
+          // Add success message to the form
+          contactForm.appendChild(successMessage);
+
+          // Reset form
+          contactForm.reset();
+
+          // Remove success message after 5 seconds
+          setTimeout(() => {
+            successMessage.remove();
+          }, 5000);
+        });
+      });
+    </script>
+
+    <!-- Back to Top Script -->
+    <script id="back-to-top-script">
+      document.addEventListener("DOMContentLoaded", function () {
+        const backToTopButton = document.getElementById("back-to-top");
+
+        window.addEventListener("scroll", function () {
+          if (window.pageYOffset > 300) {
+            backToTopButton.classList.remove("opacity-0", "invisible");
+            backToTopButton.classList.add("opacity-100", "visible");
+          } else {
+            backToTopButton.classList.remove("opacity-100", "visible");
+            backToTopButton.classList.add("opacity-0", "invisible");
+          }
+        });
+
+        backToTopButton.addEventListener("click", function () {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+
+    <!-- Smooth Scroll Script -->
+    <script id="smooth-scroll-script">
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute("href");
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+              window.scrollTo({
+                top: targetElement.offsetTop - 80, // Adjust for fixed header
+                behavior: "smooth",
+              });
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
