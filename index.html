@@ -1681,9 +1681,7 @@ https://wa.me/967737127316?text=مرحبًا%20مهندس%20نادر%2C%20أرغ
           <div class="md:w-2/3">
             <form
               name="contact"
-              method="POST"
-              netlify
-              data-netlify="true"
+              
               class="bg-gray-50 rounded-lg p-6 shadow-md"
             >
               <!-- Hidden input for Netlify to recognize the form -->
@@ -1924,43 +1922,30 @@ https://wa.me/967737127316?text=مرحبًا%20مهندس%20نادر%2C%20أرغ
     </script>
 
     <!-- Contact Form Script -->
-    <script id="contact-form-script">
-      document.addEventListener("DOMContentLoaded", function () {
-        const contactForm = document.getElementById("contact-form");
+    <script id="contact-form-script">  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("contact-form");
 
-        contactForm.addEventListener("submit", function (e) {
-          e.preventDefault();
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
 
-          // Get form values
-          const name = document.getElementById("name").value;
-          const email = document.getElementById("number").value;
-          const subject = document.getElementById("subject").value;
-          const message = document.getElementById("message").value;
+      const name = document.getElementById("name").value;
+      const number = document.getElementById("number").value;
+      const subject = document.getElementById("subject").value;
+      const message = document.getElementById("message").value;
 
-          // Here you would typically send the form data to a server
-          // For this example, we'll just show a success message
+      const fullMessage = `مرحباً، أنا ${name}.\nرقم هاتفي: ${number}\nالموضوع: ${subject}\nالرسالة:\n${message}`;
+      const encodedMessage = encodeURIComponent(fullMessage);
 
-          // Create success message
-          const successMessage = document.createElement("div");
-          successMessage.className =
-            "bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mt-4";
-          successMessage.innerHTML = `
-                    <strong class="font-bold">تم الإرسال بنجاح!</strong>
-                    <span class="block sm:inline"> سيتم التواصل معك قريباً.</span>
-                `;
+      const phone = "967737127316"; // ← ضع رقمك هنا بدون +
+      const whatsappURL = `https://wa.me/${phone}?text=${encodedMessage}`;
 
-          // Add success message to the form
-          contactForm.appendChild(successMessage);
+      // فتح واتساب
+      window.open(whatsappURL, "_blank");
 
-          // Reset form
-          contactForm.reset();
-
-          // Remove success message after 5 seconds
-          setTimeout(() => {
-            successMessage.remove();
-          }, 5000);
-        });
-      });
+      // إعادة تعيين النموذج
+      form.reset();
+    });
+  });
     </script>
 
     <!-- Back to Top Script -->
